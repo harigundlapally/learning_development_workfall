@@ -1,0 +1,115 @@
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins/_breakpoints";
+@import 'variables';
+@import 'mixins';
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import 'header';
+@import 'footer';
+
+body{
+    background-color: $bg-color;
+    color: $white-color;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+a, input, .btn {
+    &:focus{
+        outline: 0;
+        box-shadow: none;
+    }
+} 
+
+.font-normal{
+    font-weight: $font-normal;
+}
+
+.font-medium{
+    font-weight: $font-medium;
+}
+
+.font-bold{
+    font-weight: $font-bold;
+}
+
+.container{
+    @include media-breakpoint-up(xl) {
+        max-width: 1200px;
+    }
+}
+
+.btn-orange {
+    background-color: $orange-color;
+    color: $white-color;
+    &:focus, &:hover {
+        color: $white-color !important;
+    }
+}
+
+.breadcrumb {
+    background-color: transparent;
+    border: 0px;
+    padding: 30px 0 23px !important;
+    margin: 0;
+    
+    li{
+        font-size: $fs-14;
+        a{
+            font-size: $fs-14;
+            color: $white-color;
+            text-decoration: underline;
+            &.active {
+                color: $breadcrumb-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.star-ratings{
+    width: 85px;
+    height: 12px;
+    margin-right: 10px;
+    position: relative;
+
+    .blank-stars, .filled-stars {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        
+        span {
+            position: relative;
+            width: 13px;
+            height: 100%;
+            display: inline-block;
+            background-image: url('../img/filled-stars.png');
+            background-size: contain;
+            margin-right: 5px;
+        }
+    }
+
+    .blank-stars {
+        span{
+            background-image: url('../img/blank-stars.png');
+            background-size: contain;
+        }
+    }
+}

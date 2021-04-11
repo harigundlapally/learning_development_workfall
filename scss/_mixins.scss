@@ -1,0 +1,51 @@
+@mixin rotate($x) {
+    transform: rotate($x);
+    -webkit-transform: rotate($x);
+    -ms-transform: rotate($x);
+    -o-transform: rotate($x);
+    -moz-transform: rotate($x);
+}
+
+@mixin translateY($y) {
+    transform: translateY($y);
+    -webkit-transform: translateY($y);
+    -ms-transform: translateY($y);
+    -o-transform: translateY($y);
+    -moz-transform: translateY($y);
+}
+
+@mixin translateX($x) {
+    transform: translateX($x);
+    -webkit-transform: translateX($x);
+    -ms-transform: translateX($x);
+    -o-transform: translateX($x);
+    -moz-transform: translateX($x);
+}
+
+@mixin translate($v) {
+    transform: translate($v);
+    -webkit-transform: translate($v);
+    -ms-transform: translate($v);
+    -o-transform: translate($v);
+    -moz-transform: translate($v);
+}
+
+@mixin skFlex($align,$justify) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin skInlineFlex($align,$justify) {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: $align;
+    justify-content: $justify;
+}

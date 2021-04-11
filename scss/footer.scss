@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixins';
+
+.footer{
+    background-color: $bg-light-color;
+    padding: 43px 0 20px;
+    letter-spacing: 1px;
+
+    .logo{
+        min-width: 100px;
+    }
+
+    .menu {
+        flex: 1;
+        
+        ul{
+            h5{
+                font-weight: $font-medium;
+                color: $white-color;
+                font-size: $fs-12;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                li{
+                    a{
+                        display: block;
+                        color: $footer-link-color;
+                        margin-bottom: 10px;
+                        font-size: $fs-12;
+                        font-weight: $font-normal;
+                        &:hover, &:focus {
+                            text-decoration: none;
+                            outline: 0;
+                            color: $white-color;
+                        }
+                    }
+                }
+
+                &.follow-us{
+                    li {
+                        a{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

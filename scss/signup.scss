@@ -1,0 +1,121 @@
+@import 'variables';
+@import 'mixins';
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+$signup-bg: #08141B;
+$signup-base-color: #3F4F59;
+
+.sign-up{
+    background-color: $bg-light-color;
+    position: relative;
+    text-align: center;
+    padding: 100px 0;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 130px;
+        background-image: url('../img/user-registration-bg-left.png');
+        width: 220px;
+        height: calc(100% - 130px);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 150px;
+        background-image: url('../img/user-registration-bg-right.png');
+        width: 150px;
+        height: calc(100% - 150px);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+        a{
+            display: inline-block;
+        }
+    }
+
+    .sign-up-wrapper {
+        text-align: left;
+        background-color: $signup-bg;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 60px;
+        @include media-breakpoint-up(lg) {
+            width: 792px;
+        }
+
+        .heading{
+            text-align: center;
+            h1{
+                font-size: $fs-20;
+                font-weight: $font-bold;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                color: $signup-base-color;
+            }
+            h2{
+                font-size: $fs-34;
+                font-weight: $font-bold;
+                margin-bottom: 60px;
+            }
+        }
+
+        .form-group{
+            margin-bottom: 20px;
+
+            label{
+                margin-bottom: 12px;
+                font-size: $fs-18;
+                font-weight: $font-normal;
+            }
+
+            .form-control {
+                height: 50px;
+                border-color: $input-border;
+                background-color: $input-bg;
+                font-size: $fs-14;
+                font-weight: $font-normal;
+                border-radius: 4px;
+                color: $white-color;
+
+                &:focus{
+                    outline: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .form-check{
+            margin-bottom: 20px;
+
+            label{
+                font-size: $fs-14;
+                font-family: $font-normal;
+            }
+        }
+
+        .btn{
+            height: 50px;
+            margin-bottom: 30px;
+            font-weight: $font-bold;
+            letter-spacing: 1px;
+        }
+
+        a.redirect-link{
+            font-size: $fs-16;
+            font-weight: $font-bold;
+            color: $white-color;
+        }
+    }
+}

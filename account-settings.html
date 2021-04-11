@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Account settings - Workfall</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/account-settings.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="menu d-flex align-items-center justify-content-between">
+          <div class="search">
+            <form action="">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Find your favorite course">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <img src="img/search.png" alt="search" />
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <ul class="d-flex align-items-center justify-content-center m-0 p-0">
+            <li>
+              <a href="courses.html">Courses</a>
+            </li>
+            <li>
+              <a href="blogs.html">Blogs</a>
+            </li>
+            <li>
+              <a href="live-sessions.html">Live Sessions</a>
+            </li>
+            <li>
+              <a href="resources.html">Resources</a>
+            </li>
+            <li>
+              <a href="subscription-plans.html">Subscription Plans</a>
+            </li>
+            <li>
+              <a href="login.html" class="active">Login</a>
+            </li>
+            <li>
+              <a href="sign-up.html" class="sign-up active">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Content -->
+    <section class="content container">
+      <div class="account-settings">
+        <h1>Account Settings</h1>
+        <div class="account-settings-wrapper">
+          
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="accounts-tab" data-toggle="tab" href="#accountInformation" role="tab" aria-controls="accountInformation" aria-selected="true">Account Information</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="linked-tab" data-toggle="tab" href="#linkedAccounts" role="tab" aria-controls="linkedAccounts" aria-selected="false">Linked Accounts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="order-tab" data-toggle="tab" href="#orderHistory" role="tab" aria-controls="orderHistory" aria-selected="false">Order history</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="accountInformation" role="tabpanel" aria-labelledby="accounts-tab">
+
+              <!-- Account Information -->
+              <div class="account-information">
+                
+                <div class="heading">
+                  <h2>Basic Account Information</h2>
+                  <p>These settings include basic information about your account.</p>
+                </div>
+  
+                <div class="account-information-form">
+                  <form action="">
+
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Full Name</label>
+                          <input type="text" class="form-control" name="fullName" placeholder="Enter Username" />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>The name that is used for ID verification and that appears on your certificates.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Email Address (Sign In)</label>
+                          <input type="text" class="form-control" name="email" placeholder="Enter Email" />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>You receive messages from Workfall Learning and course teams at this address.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Password</label>
+                          <input type="button" class="btn btn-reset-pwd form-control" value="Reset Password" />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>Check your email account for instructions to reset your password.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Language</label>
+                          <select name="language" class="form-control">
+                            <option value="">Select Language</option>
+                            <option value="english">English</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>The language used throughout this site. This site is currently available in a limited number of languages. Changing the value of this field will cause the page to refresh.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Country or Region of Residence</label>
+                          <select name="country" class="form-control">
+                            <option value="">Select Country</option>
+                            <option value="india">India</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>The country or region where you live.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Time Zone</label>
+                          <select name="timezone" class="form-control">
+                            <option value="">Select Time Zone</option>
+                            <option value="india">India</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>Select the time zone for displaying course dates. If you do not specify a time zone, course dates, including assignment deadlines, will be displayed in your browser's local time zone.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                  </form>
+                </div>
+
+              </div>
+              <hr />
+              <!-- End of Account Information -->
+
+              <!-- Additional Information -->
+              <div class="additional-information">
+                
+                <div class="heading">
+                  <h2>Additional Information</h2>
+                </div>
+  
+                <div class="additional-information-form">
+                  <form action="">
+                      
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Education Completed</label>
+                          <select name="education" class="form-control">
+                            <option value="">Select Education</option>
+                            <option value="graduate">Graduate</option>
+                          </select>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Gender</label>
+                          <select name="gender" class="form-control">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                          </select>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Year of Birth</label>
+                          <select name="yearofbirth" class="form-control">
+                            <option value="">Select Year of Birth</option>
+                            <option value="1995">1995</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Preferred Language</label>
+                          <select name="preferredLanguage" class="form-control">
+                            <option value="">Select Preferred Language</option>
+                            <option value="english">English</option>
+                          </select>
+                        </div>
+                      </div>
+  
+                  </form>
+                </div>
+
+              </div>
+              <hr />
+              <!-- End of Account Information -->
+
+               <!-- Social Media links -->
+              <div class="social-media-links">
+                
+                <div class="heading">
+                  <h2>Social Media Links</h2>
+                  <p>Optionally, link your personal accounts to the social media icons on your edX profile.</p>
+                </div>
+  
+                <div class="account-information-form">
+                  <form action="">
+
+                    <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Twitter Link</label>
+                          <input type="text" class="form-control" name="twitter" placeholder="https://www.twitter.com/username" />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>Enter your Twitter username or the URL to your Twitter page. Delete the URL to remove the link.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Facebook Link</label>
+                          <input type="text" class="form-control" name="facebook" placeholder="https://www.facebook.com/username" />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>Enter your Facebook username or the URL to your Facebook page. Delete the URL to remove the link.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">LinkedIn Link</label>
+                          <input type="text" class="form-control" name="facebook" placeholder="https://www.linkedin.com/username" />
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>Enter your LinkedIn username or the URL to your LinkedIn page. Delete the URL to remove the link.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Language</label>
+                          <select name="language" class="form-control">
+                            <option value="">Select Language</option>
+                            <option value="english">English</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>The language used throughout this site. This site is currently available in a limited number of languages. Changing the value of this field will cause the page to refresh.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Country or Region of Residence</label>
+                          <select name="country" class="form-control">
+                            <option value="">Select Country</option>
+                            <option value="india">India</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>The country or region where you live.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label for="">Time Zone</label>
+                          <select name="timezone" class="form-control">
+                            <option value="">Select Time Zone</option>
+                            <option value="india">India</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="desc">
+                            <p>Select the time zone for displaying course dates. If you do not specify a time zone, course dates, including assignment deadlines, will be displayed in your browser's local time zone.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                  </form>
+                </div>
+
+              </div>
+              <hr />
+              <!-- End of Social Media links -->
+
+              <!-- Delete Account -->
+              <div class="delete-account">
+                
+                <div class="heading">
+                  <h2>Delete My Account</h2>
+                  <p>We’re sorry to see you go!</p>
+                </div>
+  
+                <div class="delete-account-form">
+                  <form action="">
+                    <p>
+                      Please note: Deletion of your account and personal data is permanent and cannot be undone. EdX will not be able to recover your account or the data that is deleted.
+                    </p>
+
+                    <p>
+                      Once your account is deleted, you cannot use it to take courses on the edX app, edx.org, or any other site hosted by edX. This includes access to edx.org from your employer’s or university’s system and access to private sites offered by MIT Open Learning, Wharton Executive Education, and Harvard Medical School.
+                    </p>
+
+                    <p>
+                      You may also lose access to verified certificates and other program credentials like MicroMasters certificates. If you want to make a copy of these for your records before proceeding with deletion, follow the instructions for <a href="#">Printing or downloading a certificate.</a>
+                    </p>
+
+                    <p class="note">
+                      Warning: Account deletion is permanent. Please read the above carefully before proceeding. This is an irreversible action, and you will no longer be able to use the same email on edX.
+                    </p>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="">Want to change your email, name, or password instead?</label>
+                          <br />
+                          <input type="button" class="btn btn-delete-account form-control" value="Delete My Account" />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+              </div>  
+              <!-- End of Delete Account -->
+
+            </div>
+            <div class="tab-pane" id="linkedAccounts" role="tabpanel" aria-labelledby="linked-tab">2</div>
+            <div class="tab-pane" id="orderHistory" role="tabpanel" aria-labelledby="order-tab">3</div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+    <!-- End of Content -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container d-flex align-items-start justify-content-between">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo-icon.png" alt="logo" />
+          </a>
+        </div>
+
+        <div class="menu">
+          <ul class="d-flex align-items-start justify-content-between">
+            <li>
+              <h5>Menu</h5>
+              <ul>
+                <li>
+                  <a href="home.html">Home</a>
+                </li>
+                <li>
+                  <a href="courses.html">Courses</a>
+                </li>
+                <li>
+                  <a href="blogs.html">Blogs</a>
+                </li>
+                <li>
+                  <a href="webinars.html">Webinars</a>
+                </li>
+                <li>
+                  <a href="resources.html">Resources</a>
+                </li>
+                <li>
+                  <a href="subscription-plans.html">Subscription Plans</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h5>Free Resources</h5>
+              <ul>
+                <li>
+                  <a href="#">Resource 1</a>
+                </li>
+                <li>
+                  <a href="#">Resource 2</a>
+                </li>
+                <li>
+                  <a href="#">Resource 3</a>
+                </li>
+                <li>
+                  <a href="#">Resource 4</a>
+                </li>
+                <li>
+                  <a href="#">Resource 5</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h5>Contact Us</h5>
+              <ul>
+                <li>
+                  <a href="tel:+1 919 567 8256">+1 919 567 8256</a>
+                </li>
+                <li>
+                  <a href="mailto:info@workfall.com">info@workfall.com</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h5>Office</h5>
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <address>
+                      123 N. Main St.<br />
+                      Nowhere, MO 10567
+                    </address>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h5>We accept</h5>
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <img src="img/we-accept-cards.png" alt="cards">
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h5>Follow Us</h5>
+              <ul class="d-flex align-items-start justify-content-between follow-us">
+                <li>
+                  <a href="javascript:void(0)">
+                    <img src="img/facebook.png" alt="facebook">
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <img src="img/twitter.png" alt="facebook">
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <img src="img/linkedin.png" alt="facebook">
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <img src="img/Medium.png" alt="facebook">
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+    <script>
+      $(function() {
+        $('#myTab a').on('click', function (e) {
+          e.preventDefault()
+          $(this).tab('show')
+        });
+      });
+    </script>
+</body>
+</html>
